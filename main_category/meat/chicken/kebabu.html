@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<title>チキンケバブ</title>
+<title>ケバブトルティーヤ</title>
 
 <style>
 body {
@@ -73,19 +73,7 @@ header {
   color: #444;
 }
 
-ul {
-  margin-top: 10px;
-  padding-left: 20px;
-}
-
-.step {
-  background: #fff7f2;
-  padding: 12px;
-  border-radius: 8px;
-  margin-bottom: 10px;
-  border-left: 4px solid #ff7043;
-}
-
+/* 材料カード（横並び） */
 .ingredients-wrapper {
   display: flex;
   gap: 30px;
@@ -109,9 +97,26 @@ ul {
   padding-bottom: 4px;
 }
 
+ul {
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+/* 作り方ステップ */
+.step {
+  background: #fff7f2;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  border-left: 4px solid #ff7043;
+}
+
 /* スマホ対応 */
 @media (max-width: 700px) {
-  photo-card img {
+  .ingredients-wrapper {
+    flex-direction: column;
+  }
+  .photo-card img {
     height: 200px;
   }
 }
@@ -121,63 +126,29 @@ ul {
 
 <body>
 
-<header>チキンケバブ</header>
+<header>ケバブトルティーヤ</header>
 
 <div class="container">
 
   <!-- 写真カード -->
   <div class="photo-card">
-    <img src="img/kebabu.jpg" alt="ケバブ">
-    <div class="caption">お店で食べる味、チキンケバブ</div>
+    <img src="img/kebabu.jpg" alt="ケバブトルティーヤ">
+    <div class="caption">お店の味「ケバブ」</div>
   </div>
 
   <!-- レシピカード -->
   <div class="recipe-card">
-    <h2>きつねうどん</h2>
+    <h2>材料（２人前）</h2>
 
-    <h3>材料（1人前）</h3>
-        <div class="ingredients-wrapper">
-
-        <div class="ingredients-block">
-            <div class="ingredients-title">具材</div>
-            <ul>
-                <li>油揚げ：2枚</li>
-                <li>水：100ml</li>
-                <li>醤油：大さじ1</li>
-                <li>みりん：大さじ3</li>
-                <li>味の素：1振り</li>
-                <li>カツオ粉：1つまみ（1g）</li>
-            </ul>
-        </div>
-
-        <div class="ingredients-block">
-            <div class="ingredients-title">つゆ</div>
-            <ul>
-                <li>水：350ml</li>
-                <li>醤油：小さじ1</li>
-                <li>酒：大さじ1</li>
-                <li>醤油：大さじ1</li>
-                <li>みりん：大さじ1</li>
-                <li>味の素：5振り</li>
-                <li>カツオ粉：4つまみ（4g）</li>
-                <li>塩：1つまみ</li>
-                <li>冷凍うどん：1玉</li>
-                <li>長ネギ：1/4本</li>
-            </ul>
-        </div>
-
+    <div class="ingredients-wrapper">
+      <div class="ingredients-block"><div class="ingredients-title">肉の下準備</div><ul><li>鶏もも肉：１枚（３００g）</li><li>塩：小さじ半分</li><li>油：適量</li><li>ヨーグルト：大さじ３</li><li>クミン：小さじ１</li><li>オレガノ：小さじ２/３</li><li>味の素：６振り</li></ul></div><div class="ingredients-block"><div class="ingredients-title">ソース</div><ul><li>マヨネーズ：５０g</li><li>ケチャップ：３０g</li><li>クミン：小さじ１</li><li>粉コショー：４振り</li><li>ヨーグルト：小さじ２</li><li>タバスコ：１０振り</li><li>塩：少々</li></ul></div><div class="ingredients-block"><div class="ingredients-title">その他食材</div><ul><li>キャベツ：４０g</li><li>トマト：１個</li><li>トルティーヤ：食べる量だけ</li></ul></div>
     </div>
-
 
     <h2>作り方</h2>
 
-    <div class="step">1. フライパンに豚挽き肉と味噌を入れ、油を引かずに炒めて肉味噌を作る。常温で冷ましておく。</div>
-
-    <div class="step">2. ボウルに豆乳・すりごま・味噌・豆板醤・ごま油・鶏ガラ・酢・ニンニク・旨味調味料・醤油・黒胡椒・砂糖を入れて混ぜ、冷蔵庫で冷やす。</div>
-
-    <div class="step">3. 麺をゆでて氷水でしっかり締める。水分を手でよく絞ってタレが薄まらないようにする。</div>
-
-    <div class="step">4. 冷やしたタレに麺を絡め、肉味噌・小ネギ・ラー油をのせて完成。</div>
+    <div id="steps">
+      <div class="step">1. ギリシャヨーグルトの場合はそのまま使う。その他のヨーグルトの場合、器に入れラップせずにレンジで１分加熱したあと水気をとる</div><div class="step">2. 鶏もも肉に（胸肉でも可）水切りしたヨーグルト・クミン・オレガノ・塩・味の素を入れ揉みこんでおく。</div><div class="step">3. マヨネーズ・ケチャップ・クミン・コショー・ヨーグルト・タバスコを混ぜてソースを作っておく。</div><div class="step">4. 鶏もも肉を油で炒める。</div><div class="step">5. キャベツは千切り、トマトは１ｃｍ角に角切りにしておく。</div><div class="step">6. トルティーヤの上にソースを薄く塗り、キャベツ・トマト・鶏肉・ハラペーニョを乗せ、上からソースをかけたら完成。</div><div class="step">7. トルティーヤがなければ、トーストした食パンの上に乗せて、オープンサンドにしても◎</div>
+    </div>
 
   </div>
 
