@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>山形のだし</title>
+
+<style>
+body {
+  font-family: "Yu Gothic", sans-serif;
+  margin: 0;
+  background: #fafafa;
+  line-height: 1.8;
+}
+
+/* ヘッダー */
+header {
+  background: #ff7043;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+/* メインコンテンツ */
+.container {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+/* 写真カード */
+.photo-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+  margin-bottom: 30px;
+}
+
+.photo-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.photo-card .caption {
+  padding: 15px;
+  font-size: 18px;
+  color: #555;
+  text-align: center;
+}
+
+/* レシピカード */
+.recipe-card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  margin-bottom: 40px;
+}
+
+.recipe-card h2 {
+  margin-top: 0;
+  border-left: 6px solid #ff7043;
+  padding-left: 10px;
+  font-size: 24px;
+}
+
+.recipe-card h3 {
+  margin-top: 25px;
+  font-size: 20px;
+  color: #444;
+}
+
+/* 材料カード（横並び） */
+.ingredients-wrapper {
+  display: flex;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.ingredients-block {
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  width: 250px;
+}
+
+.ingredients-title {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #ff7043;
+  border-bottom: 2px solid #ff7043;
+  padding-bottom: 4px;
+}
+
+ul {
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+/* 作り方ステップ */
+.step {
+  background: #fff7f2;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  border-left: 4px solid #ff7043;
+}
+
+/* スマホ対応 */
+@media (max-width: 700px) {
+  .ingredients-wrapper {
+    flex-direction: column;
+  }
+  .photo-card img {
+    height: 200px;
+  }
+}
+</style>
+
+</head>
+
+<body>
+
+<header>山形のだし</header>
+
+<div class="container">
+
+  <!-- 写真カード -->
+  <div class="photo-card">
+    <img src="img/yamagatanodashi" alt="山形のだし">
+    <div class="caption">夏にさっぱり、ご飯にかけても素麵にも</div>
+  </div>
+
+  <!-- レシピカード -->
+  <div class="recipe-card">
+    <h2>材料（３～４人前）</h2>
+
+    <div class="ingredients-wrapper">
+      <div class="ingredients-block"><ul><li>なす：２本</li><li>オクラ：２パック（160g）</li><li>きゅうり：２，３本（220g）</li><li>みょうが：３本</li><li>大葉：２０枚</li><li>生姜：１０g</li><li>塩：２つまみ（なす）</li><li>塩：オクラ茹で用（塩分濃度１%）</li><li>ほんだし：小さじ１と半分</li><li>塩昆布：１５g</li><li>醤油：小さじ２</li></ul></div>
+    </div>
+
+    <h2>作り方</h2>
+
+    <div id="steps">
+      <div class="step">1. なすを５ｍｍから１ｃｍ角になるように切り、水につけてあくを抜く</div><div class="step">2. あくを抜いたナスをざるにあけ、塩二つまみまぶしてまぜて１０分おいておく</div><div class="step">3. なすをぎゅっと絞り、水気を抜く</div><div class="step">4. オクラを塩分濃度１％の熱湯で１分半～２分茹でる。</div><div class="step">5. きゅうり・オクラ・みょうがをそれぞれ５ｍｍから１ｃｍ角になるように切る</div><div class="step">6. 大葉のへたをとり、細千切り。生姜も千切り</div><div class="step">7. 上記の具材を全てボウルに入れ、ほんだし・塩昆布・醤油を入れてかき混ぜる。</div><div class="step">8. 冷蔵庫で２，３時間寝かせたら完成</div>
+    </div>
+
+  </div>
+
+</div>
+
+</body>
+</html>
