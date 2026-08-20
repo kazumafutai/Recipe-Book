@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>サラダうどん</title>
+
+<style>
+body {
+  font-family: "Yu Gothic", sans-serif;
+  margin: 0;
+  background: #fafafa;
+  line-height: 1.8;
+}
+
+/* ヘッダー */
+header {
+  background: #ff7043;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  font-size: 26px;
+  font-weight: bold;
+  position: relative; 
+}
+
+/* メインコンテンツ */
+.container {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+/* 写真カード */
+.photo-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+  margin-bottom: 30px;
+}
+
+.photo-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.photo-card .caption {
+  padding: 15px;
+  font-size: 18px;
+  color: #555;
+  text-align: center;
+}
+
+/* レシピカード */
+.recipe-card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  margin-bottom: 40px;
+}
+
+.recipe-card h2 {
+  margin-top: 0;
+  border-left: 6px solid #ff7043;
+  padding-left: 10px;
+  font-size: 24px;
+}
+
+.recipe-card h3 {
+  margin-top: 25px;
+  font-size: 20px;
+  color: #444;
+}
+
+/* 材料カード（横並び） */
+.ingredients-wrapper {
+  display: flex;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.ingredients-block {
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  width: 250px;
+}
+
+.ingredients-title {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #ff7043;
+  border-bottom: 2px solid #ff7043;
+  padding-bottom: 4px;
+}
+
+ul {
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+/* 作り方ステップ */
+.step {
+  background: #fff7f2;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  border-left: 4px solid #ff7043;
+}
+
+/* スマホ対応 */
+@media (max-width: 700px) {
+  .ingredients-wrapper {
+    flex-direction: column;
+  }
+  .photo-card img {
+    height: 200px;
+  }
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+    サラダうどん
+    <a class="back-link" href="../../../index.html" style="position: absolute; right: 20px; top: 50%; transform: translateY(-50%); color: white; text-decoration: none; font-size: 16px; background: rgba(255,255,255,0.2); padding: 8px 14px; border-radius: 8px;">トップページへ戻る</a>
+</header>
+
+<div class="container">
+
+  <!-- 写真カード -->
+  <div class="photo-card">
+    <img src="img/salad_udon.jpg" alt="サラダうどん">
+    <div class="caption">もう冷やし中華はいらない</div>
+  </div>
+
+  <!-- レシピカード -->
+  <div class="recipe-card">
+    <h2>材料（１人前）</h2>
+
+    <div class="ingredients-wrapper">
+      <div class="ingredients-block"><div class="ingredients-title">具材</div><ul><li>豚バラ肉：６０g</li><li>冷凍うどん：１玉</li><li>レタス：６０g</li><li>トマト：１/２個（７０g）</li><li>小ねぎ：適量</li></ul></div><div class="ingredients-block"><div class="ingredients-title">かつお醤油ダレ</div><ul><li>醤油：大さじ１</li><li>酢：小さじ１</li><li>水：小さじ２</li><li>砂糖：小さじ１</li><li>味の素：４振り</li><li>かつお粉：２つまみ</li></ul></div><div class="ingredients-block"><div class="ingredients-title">ゴママヨ</div><ul><li>すりごま：大さじ半分</li><li>マヨネーズ：大さじ１</li><li>砂糖：小さじ半分</li><li>醤油：小さじ半分</li><li>ごま油：大さじ半分</li></ul></div>
+    </div>
+
+    <h2>作り方</h2>
+
+    <div id="steps">
+      <div class="step">1. 醤油大さじ１・素小さじ１・水小さじ２・砂糖小さじ１・味の素４振り・かつお粉２つまみを混ぜて冷蔵庫で冷やしておく。</div><div class="step">2. トマトは大きめの賽の目切りに、レタスは７，８㎜幅の千切りにしておく。</div><div class="step">3. 鍋にお湯を沸かし、冷凍うどんと豚バラ肉（７，８㎝幅にカットしたもの）を一緒に入れ煮る。</div><div class="step">4. 豚バラ肉に火が通ったら別皿によけておく。</div><div class="step">5. うどんが茹で上がったら、流水でぬめりをとり、氷水でしっかりとしめる。</div><div class="step">6. うどんを器に盛り、トマト・レタス・豚バラ肉を乗せ、かつお醤油ダレを回しかける。</div><div class="step">7. ゴママヨ・小口切りにした小ねぎ・ごま油大さじ半分を回しかけて完成。</div>
+    </div>
+
+    <h2>ちょい足し・おすすめの「しめ」レシピ</h2>
+    <div id="addon">
+    
+    </div>
+
+  </div>
+
+</div>
+
+</body>
+</html>

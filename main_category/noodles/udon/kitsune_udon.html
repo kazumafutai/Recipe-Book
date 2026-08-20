@@ -20,6 +20,7 @@ header {
   text-align: center;
   font-size: 26px;
   font-weight: bold;
+  position: relative; 
 }
 
 /* メインコンテンツ */
@@ -73,11 +74,36 @@ header {
   color: #444;
 }
 
+/* 材料カード（横並び） */
+.ingredients-wrapper {
+  display: flex;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.ingredients-block {
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  width: 250px;
+}
+
+.ingredients-title {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #ff7043;
+  border-bottom: 2px solid #ff7043;
+  padding-bottom: 4px;
+}
+
 ul {
   margin-top: 10px;
   padding-left: 20px;
 }
 
+/* 作り方ステップ */
 .step {
   background: #fff7f2;
   padding: 12px;
@@ -86,80 +112,57 @@ ul {
   border-left: 4px solid #ff7043;
 }
 
-.ingredients-wrapper {
-  display: flex;
-  gap: 30px;
-  margin-top: 20px;
-}
-
-.ingredients-wrapper ul {
-  background: #fff;
-  padding: 15px;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  width: 250px;
-}
-
 /* スマホ対応 */
 @media (max-width: 700px) {
-  photo-card img {
+  .ingredients-wrapper {
+    flex-direction: column;
+  }
+  .photo-card img {
     height: 200px;
   }
 }
 </style>
+
 </head>
 
 <body>
 
 <header>
-  きつねうどん
-  <a class="back-link" href="../../../index.html" style="position: absolute; right: 20px; top: 50%; transform: translateY(-50%); color: white; text-decoration: none; font-size: 16px; background: rgba(255,255,255,0.2); padding: 8px 14px; border-radius: 8px;">トップページへ戻る</a>
+    きつねうどん
+    <a class="back-link" href="../../../index.html" style="position: absolute; right: 20px; top: 50%; transform: translateY(-50%); color: white; text-decoration: none; font-size: 16px; background: rgba(255,255,255,0.2); padding: 8px 14px; border-radius: 8px;">トップページへ戻る</a>
 </header>
 
 <div class="container">
 
   <!-- 写真カード -->
   <div class="photo-card">
-    <img src="img/kitsune_udon.png" alt="きつねうどん">
-    <div class="caption">じゅわっと染み出る「きつねうどん」</div>
+    <img src="img/kitsune_udon.jpg" alt="きつねうどん">
+    <div class="caption">じゅわっと広がるお出汁が最高</div>
   </div>
 
   <!-- レシピカード -->
   <div class="recipe-card">
-    <h2>きつねうどん</h2>
+    <h2>材料（１人前）</h2>
 
-    <h3>材料（1人前）</h3>
     <div class="ingredients-wrapper">
-        <ul>
-            <li>油揚げ：2枚</li>
-            <li>水：100ml</li>
-            <li>醤油：大さじ1</li>
-            <li>みりん：大さじ3</li>
-            <li>味の素：1振り</li>
-            <li>カツオ粉：1つまみ（1g）</li>
-        </ul>
-
-        <ul>
-            <li>水：350ml</li>
-            <li>醤油：小さじ1</li>
-            <li>酒：大さじ1</li>
-            <li>醤油：大さじ1</li>
-            <li>みりん：大さじ1</li>
-            <li>味の素：5振り</li>
-            <li>カツオ粉：4つまみ（4g）</li>
-            <li>塩：1つまみ</li>
-            <li>冷凍うどん：1玉</li>
-            <li>長ネギ：1/4本</li>
-        </ul>
+      <div class="ingredients-block"><div class="ingredients-title">油揚げの材料（２人前）</div><ul><li>油揚げ：２枚</li><li>水：１００㏄</li><li>醤油：大さじ１</li><li>みりん：大さじ３</li><li>味の素：１振り</li><li>かつお粉：一つまみ</li></ul></div><div class="ingredients-block"><div class="ingredients-title">うどん出汁の材料（１人前）</div><ul><li>水：３５０ml</li><li>醤油：小さじ１</li><li>酒：大さじ１</li><li>みりん：大さじ１</li><li>かつお粉：４つまみ</li><li>味の素：５振り</li><li>塩：１つまみ</li><li>冷凍うどん：１玉</li><li>長ネギ：1/4本 ３０g</li></ul></div>
     </div>
 
+    <h2>作り方</h2>
 
-    <h3>作り方（1人前）</h3>
-    <div class="step">1. 鰹節5gを器に入れ、電子レンジ600W 50秒加熱した後、揉みほぐしてカツオ粉を作っておく。</div>
-    <div class="step">2. フライパンに水100ml、醤油大さじ1、みりん大さじ3、カツオ粉1g、味の素1振り入れる。</div>
-    <div class="step">3. 2.の中に1枚を半分に切った油揚げを2枚浸し、蓋をして5分煮る。</div>
-    <div class="step">4. 鍋に水350ml、醤油小さじ1、酒大さじ1、みりん大さじ1、カツオ粉4g、塩1つまみ入れて沸かす。</div>
-    <div class="step">5. 4.の鍋に、電子レンジで温めた冷凍うどん1玉と、長ネギの斜め細切りを入れて沸かし、油揚げ1枚分のせて完成。</div>
+    <div id="steps">
+      <div class="step">1. 油揚げ２枚を半分に切り、水１００ml・醤油大さじ１・みりん大さじ３・かつお粉１つまみ・味の素１振り入れた鍋に入れる。</div><div class="step">2. １．を弱中火にかけ蓋をし、５分煮る。</div><div class="step">3. 別の小鍋に、水３５０ml・醤油小さじ１・酒大さじ１・みりん大さじ１・かつお粉４つまみ・味の素５振り・塩１つまみ入れて沸かしておく。</div><div class="step">4. ２．の蓋を開け油揚げを裏返し、汁気がほとんどなくなるまで弱中火で煮る。</div><div class="step">5. ３．の鍋に電子レンジで解凍したうどんと斜め細切りにした長ネギを入れて１分ほど煮る。</div><div class="step">6. ５．を器に盛り、油揚げ１枚分を乗せて完成</div>
+    </div>
+
+    <h2>ちょい足し・おすすめの「しめ」レシピ</h2>
+    <div id="addon">
+    
+        <div class="remarks-card" style="margin-top: 35px; background: #fffde6; border-left: 6px solid #fbc02d; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.04); text-align: left;">
+            <h3 style="margin: 0 0 10px 0; font-size: 18px; color: #f57f17; display: flex; align-items: center; gap: 6px;">💡 ちょい足しメモ・備考</h3>
+            <p style="margin: 0; font-size: 15px; color: #5d4037; line-height: 1.6; white-space: pre-wrap;">彩りで七味唐辛子をかける</p>
+        </div>
+    </div>
+
   </div>
 
 </div>

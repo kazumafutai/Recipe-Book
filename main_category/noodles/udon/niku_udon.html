@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>肉うどん</title>
+
+<style>
+body {
+  font-family: "Yu Gothic", sans-serif;
+  margin: 0;
+  background: #fafafa;
+  line-height: 1.8;
+}
+
+/* ヘッダー */
+header {
+  background: #ff7043;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  font-size: 26px;
+  font-weight: bold;
+  position: relative; 
+}
+
+/* メインコンテンツ */
+.container {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+/* 写真カード */
+.photo-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+  margin-bottom: 30px;
+}
+
+.photo-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.photo-card .caption {
+  padding: 15px;
+  font-size: 18px;
+  color: #555;
+  text-align: center;
+}
+
+/* レシピカード */
+.recipe-card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  margin-bottom: 40px;
+}
+
+.recipe-card h2 {
+  margin-top: 0;
+  border-left: 6px solid #ff7043;
+  padding-left: 10px;
+  font-size: 24px;
+}
+
+.recipe-card h3 {
+  margin-top: 25px;
+  font-size: 20px;
+  color: #444;
+}
+
+/* 材料カード（横並び） */
+.ingredients-wrapper {
+  display: flex;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.ingredients-block {
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  width: 250px;
+}
+
+.ingredients-title {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #ff7043;
+  border-bottom: 2px solid #ff7043;
+  padding-bottom: 4px;
+}
+
+ul {
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+/* 作り方ステップ */
+.step {
+  background: #fff7f2;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  border-left: 4px solid #ff7043;
+}
+
+/* スマホ対応 */
+@media (max-width: 700px) {
+  .ingredients-wrapper {
+    flex-direction: column;
+  }
+  .photo-card img {
+    height: 200px;
+  }
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+    肉うどん
+    <a class="back-link" href="../../../index.html" style="position: absolute; right: 20px; top: 50%; transform: translateY(-50%); color: white; text-decoration: none; font-size: 16px; background: rgba(255,255,255,0.2); padding: 8px 14px; border-radius: 8px;">トップページへ戻る</a>
+</header>
+
+<div class="container">
+
+  <!-- 写真カード -->
+  <div class="photo-card">
+    <img src="img/niku_udon.jpg" alt="肉うどん">
+    <div class="caption">甘辛いジューシーなお肉が最高</div>
+  </div>
+
+  <!-- レシピカード -->
+  <div class="recipe-card">
+    <h2>材料（1人前）</h2>
+
+    <div class="ingredients-wrapper">
+      <div class="ingredients-block"><div class="ingredients-title">肉の調理</div><ul><li>牛薄切り肉：１２０g</li><li>生姜：５g</li><li>牛脂（なければサラダ油か米油）：小さじ２</li><li>酒：大さじ１</li><li>醤油：大さじ１</li><li>みりん：大さじ１</li><li>砂糖：小さじ２</li><li>オイスターソース：小さじ１</li></ul></div><div class="ingredients-block"><div class="ingredients-title">うどんの調理</div><ul><li>冷凍うどん：１玉</li><li>水：２３０ml</li><li>白だし：大さじ２</li><li>かつお粉：１つまみ</li><li>小ねぎ：適量</li></ul></div>
+    </div>
+
+    <h2>作り方</h2>
+
+    <div id="steps">
+      <div class="step">1. 鍋に酒・醤油・みりん・牛脂・オイスターソース・砂糖・牛肉を入れ、しっかり煮詰める。</div><div class="step">2. 別の鍋に水・白だし・かつお粉を入れ沸かす。</div><div class="step">3. ２．が沸いたら、冷凍うどんを煮る。</div><div class="step">4. ３．を丼に入れ、１．の牛肉を汁ごとかけ、小ねぎを添えて完成</div>
+    </div>
+
+    <h2>ちょい足し・おすすめの「しめ」レシピ</h2>
+    <div id="addon">
+    
+    </div>
+
+  </div>
+
+</div>
+
+</body>
+</html>
